@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+    /* border:1px solid red; */
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+main{
+    background-color: hsl(0, 0%, 100%);
+    width:100%;
+    max-width: 60em;
+    display:flex;
+    margin:0 auto;
+    border-radius: 25px;
+    overflow:hidden;  /* 凸出去的東西 不要顯示 */
+}
+.imagebox img{
+    width:100%;
+    /* height: auto; */
+    min-height:60em;
+   
+}
+.imgbox{
+    width:100%;
+    overflow: hidden;
+    max-width: 100ch;
+}
+section{
+    padding:1rem;
+}
+
+button{
+    background-color: hsl(158, 36%, 37%);
+    color:white;
+    font-size: 14px;
+    margin:0 auto;
+    padding:1rem 0;
+    width:100%;
+    border-radius: 10px;
+    border: none ;
+    font-family: 'Montserrat',Arial, Helvetica, sans-serif sans-serif;
+}
+button img{
+    width: 2.5em;
+    vertical-align: middle;
+    padding-right: 1rem;
+}
+#price{
+    display:flex;
+}
+
+@media screen and (max-width: 650px){
+    main{
+        flex-direction: column;
+    }
+}

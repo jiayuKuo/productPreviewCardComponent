@@ -5,37 +5,62 @@
     /* border:1px solid red; */
     box-sizing: border-box;
 }
+
 body{
     background-color: hsl(30, 38%, 92%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 130vh;
+    color:grey;
 
 }
 main{
     background-color: hsl(0, 0%, 100%);
     width:100%;
-    max-width: 60em;
+    max-height: 40em;
+    max-width: 50em;
     display:flex;
     margin:0 auto;
     border-radius: 25px;
-    overflow:hidden;  /* 凸出去的東西 不要顯示 */
+    overflow:hidden;   
+    /* 凸出去的東西 不要顯示  */
 }
-.imagebox img{
-    width:100%;
-    /* height: auto; */
-    min-height:60em;
-   
+.imgbox img{
+    max-width: 100%;
+    max-height: 100%;
 }
 .imgbox{
-    width:100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     max-width: 100ch;
 }
 section{
-    padding:1rem;
+    width:50%;
+    padding:2rem;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+   
+}
+section > p:first-of-type{
+    text-transform: uppercase;
+    letter-spacing:.5em;
+}
+section > p:nth-of-type(2){
+    line-height: 2rem;
+    padding-top: 1rem;;
+
+    
+}
+h1, #price p:first-child {
+    font-family: 'Fraunces', 'Times New Roman', Times, serif; 
+}
+h1{
+    color:black;
+    font-size: 5vh;
+    line-height: 1em;
+    /* letter-spacing:-.03em; */
+    
 }
 
 button{
@@ -56,10 +81,42 @@ button img{
 }
 #price{
     display:flex;
+    align-items:center;
+    
+}
+#price p:first-child{
+    color:hsl(158, 36%, 37%);
+    font-size: 3rem;
+    padding-right: 2rem;
+    margin:10px 0px;
+    letter-spacing:.05em;
+}
+#price p:nth-child(2){
+    text-decoration: line-through;
+
 }
 
 @media screen and (max-width: 650px){
+    body{
+        max-width: 100%;
+        overflow-x: hidden;
+    }
     main{
         flex-direction: column;
     }
+section{
+    height:60%;
+    width: 100%;
+}
+.imgbox{
+ height:40%;
+
+}
+.imgbox img{
+    /* max-width: 100%; */
+    width:100%;
+    height: auto;
+    object-fit: cover;  
+    object-position: 0 30%;
+}
 }

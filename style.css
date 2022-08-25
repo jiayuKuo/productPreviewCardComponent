@@ -76,6 +76,10 @@ button{
     border: none ;
     font-family: 'Montserrat',Arial, Helvetica, sans-serif sans-serif;
 }
+
+button:hover{
+    background-color: hsl(212, 21%, 14%);
+}
 button img{
     width: 2.5em;
     vertical-align: middle;
@@ -102,9 +106,10 @@ button img{
 
 }
 
+
 @media screen and (max-width: 650px){
     
-    main{
+ main{
         flex-direction: column;
         max-height: fit-content;
         max-width: 30em;
